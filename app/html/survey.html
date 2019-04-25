@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="user-name">Name</label>
+            <input type="text" class="form-control" id="user-name" placeholder="You" required>
+        </div>
+        <div class="form-group">
+            <label for="user-picture">Link to Photo Image </label>
+            <input type="text" class="form-control" id="user-picture" placeholder="https://www.google.com" required>
+        </div>
+    </form>
+    <h3>Question 1</h3>
+    <h5>How much do you like dogs?</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not confident)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (confident)</option>
+    </select>
+    <br>
+    <h3>Question 2</h3>
+    <h5>How much do you like Cats?</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not confident)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (confident)</option>
+    </select>
+    <br>
+    <h3>Question 3</h3>
+    <h5>How much do you like short sprints on the beach?</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not much)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (very much)</option>
+    </select>
+    <br>
+    <h3>Question 4</h3>
+    <h5>Rate you level of existential dread</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not dreadful)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Very dreadful)</option>
+    </select>
+    <br>
+    <h3>Question 5</h3>
+    <h5>Rate you level of friendliness</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not friendly)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (very friendly)</option>
+    </select>
+    <br>
+    <h3>Question 6</h3>
+    <h5>How much do you enjoy philosophy</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not much)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (very much)</option>
+    </select>
+    <br>
+    <h3>Question 7</h3>
+    <h5>rate you level of history knowledge</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not confident)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (confident)</option>
+    </select>
+    <br>
+    <h3>Question 8</h3>
+    <h5>how much do you enjoy pancakes?</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not much)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (very much)</option>
+    </select>
+    <br>
+    <h3>Question 9</h3>
+    <h5>how well can you quote the bible?</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not confident)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (confident)</option>
+    </select>
+    <br>
+    <h3>Question 10</h3>
+    <h5>how well can you quote SuperTroopers</h5>
+    <select id="q1">
+        <option value=""></option>
+        <option value="1">1 (not confident)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (confident)</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success btn-block"></button>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2>Your new friend is: </h2>
+                <p id="new-friend"></p>
+                <img id="new-friend-pic" src="#">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<script src="./routing/apirouts.js"></script>
+<script src="./routing/htmlrouts.js"></script>
+<script src="./arrayData/array.js"></script>
+<script src="../server.js"></script>
+
+
+
+
+</html>
