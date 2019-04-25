@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Friend Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
 </head>
 
 <body>
@@ -131,7 +133,7 @@
     <br>
     <br>
     <br>
-    <button type="submit" class="btn btn-success btn-block"></button>
+    <button type="submit" class="btn btn-success btn-block" id="submit">Submit!</button>
 
     <div id="resultModal" class="modal">
         <div class="modal-content">
@@ -154,6 +156,7 @@
 <script src="./routing/htmlrouts.js"></script>
 <script src="./arrayData/array.js"></script>
 <script src="../server.js"></script>
+</html>
 
 
 <script type="text/javascript">
@@ -180,7 +183,7 @@
                 $("#q10").val("");
 
                 $("#friend-name").html(data.name);
-                $("#friend-picture").attr("src",data.photo);
+                $("#friend-picture").attr("src", data.photo);
 
                 $("#resultModal").show();
                 closeModal();
@@ -193,4 +196,3 @@
     });
 </script>
 
-</html>
