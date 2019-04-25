@@ -7,8 +7,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "app/html/")));
 
-require("./app/routing/apirouts")(app);
-require("./app/routing/htmlrouts")(app);
+require("./routing/apirouts")(app);
+require("./routing/htmlrouts")(app);
 
 app.listen(PORT, function(){
     console.log("App listening on PORT "+PORT);
