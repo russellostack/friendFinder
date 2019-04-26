@@ -1,15 +1,17 @@
-var friendsdata = require("../arrayData/array");
+var friendsData = require("../arrayData/array");
 module.exports = function(app){
     app.get("/api/array", function (req,res){
-        res.json(friendsdata);
+        res.json(friendsData);
     });
     app.post("/api/array", function (req, res){
-        var newFriend = req.body;
+
+
+        var userData = req.body;
         var diffArray = [];
-        for (var i=0; i<friendsdata.length;i++){
+        for (var i=0; i<friendsData.length;i++){
             var sum = 0;
-            for (var u = 0; u < friendsdata[i].scores.length; u++){
-                sim += Math.abs(parseInt(newFriend.scores[j]- parseInt(friendsdata[i].scores[j])));
+            for (var u = 0; u < friendsData[i].scores.length; u++){
+                sum += Math.abs(parseInt(userData.scores[u]- parseInt(friendsData[i].scores[u])));
             }
             diffArray.push(sum);
         }
@@ -21,7 +23,7 @@ module.exports = function(app){
             matchValue = parseInt(diffArray[p])
             }
         }
-        friendsdata.push(newFriend);
-        res.send(friendsdata[match]);
+        friendsData.push(userData);
+        res.send(friendsData[match]);
     })
 }
